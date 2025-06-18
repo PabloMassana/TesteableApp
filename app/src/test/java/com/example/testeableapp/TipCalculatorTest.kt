@@ -1,5 +1,6 @@
 package com.example.testeableapp
 
+import com.example.testeableapp.ui.Screens.calculateTip
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
