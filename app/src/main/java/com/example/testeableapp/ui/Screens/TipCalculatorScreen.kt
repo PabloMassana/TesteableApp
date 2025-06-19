@@ -32,7 +32,7 @@ fun TipCalculatorScreen() {
     var numberOfPeople by remember { mutableStateOf(1) }
 
     val bill = billAmount.toDoubleOrNull() ?: 0.0
-    val tip = calculateTip(bill, tipPercentage, roundUp)
+    val tip = calculateTip(bill, tipPercentage, roundUp, false)
     val totalPerPerson = if (numberOfPeople > 0) (bill + tip) / numberOfPeople else 0.0
 
     Column(
@@ -104,7 +104,7 @@ fun TipCalculatorScreen() {
     }
 }
 
-fun calculateTip(amount: Double, tipPercent: Int, roundUp: Boolean): Double {
+fun calculateTip(amount: Double, tipPercent: Int, roundUp: Boolean, bool: Boolean): Double {
     var tip = amount * tipPercent / 100
     if (roundUp) {
         tip = kotlin.math.ceil(tip)
