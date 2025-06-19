@@ -42,7 +42,7 @@ android {
 
     dependencies {
         testImplementation(kotlin("test"))
-        testImplementation(libs.junit) // 👈 Ya apunta a junit:junit:4.13.2
+        testImplementation(libs.junit)
         testImplementation(libs.androidx.core.testing)
         testImplementation(libs.kotlinx.coroutines.test)
 
