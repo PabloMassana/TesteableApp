@@ -10,12 +10,10 @@ class TipCalculatorTestPU {
 
     @Test
     fun calculateTip_20Percent() {
-        val result = calculateTip(
-            100.0, 20, false,
-            bool = TODO()
-        )
+        val result = calculateTip(100.0, 20, false, false)
         assertEquals(20.0, result, 0.01)
     }
+
 
     @Test
     fun calculateTip_15Percent_RoundUp() {
